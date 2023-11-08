@@ -1,0 +1,36 @@
+{% extends "include.html" %}
+
+{% block title %}
+Home | Student Managment
+{% endblock %}
+
+{% block content %}
+
+<div class="container border rounded border-primary col-offset-10 col-md-10 col-xs-10 text-dark" style="margin-top: 80px;">
+    <main>
+        <br><h1 class="display-4 fw-bold text-center">SEARCH DETAILS</h1><br>
+        <input type="search" name="search" id="search" placeholder="SEARCH FOR STUDENT"  class="border border-primary  form-control "  autocapitalize="off" autocomplete="off">
+        <hr>
+        <table class="table table-hover border border-dark ">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Roll Number</th>
+                <th scope="col">E-Mail</th>
+                <th scope="col">UPDATE</th>
+                <th scope="col">DELETE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+    </main>
+</div>
+
+{% endblock %}
