@@ -10,7 +10,9 @@ Home | Student Managment
     <main>
         <br><h1 class="display-4 fw-bold text-center">SEARCH DETAILS</h1><br>
         <input type="search" name="search" id="search" placeholder="SEARCH FOR STUDENT"  class="border border-primary  form-control "  autocapitalize="off" autocomplete="off">
+        <br><a href="{% url 'insert' %}" class="btn btn-primary w-100">INSERT</a>
         <hr>
+        {% if data %}
         <table class="table table-hover border border-dark ">
             <thead>
               <tr>
@@ -18,17 +20,26 @@ Home | Student Managment
                 <th scope="col">Name</th>
                 <th scope="col">Roll Number</th>
                 <th scope="col">E-Mail</th>
+                <th scope="col">IMAGE</th>
                 <th scope="col">UPDATE</th>
                 <th scope="col">DELETE</th>
               </tr>
             </thead>
             <tbody>
+              {% for i in data %}
               <tr>
-
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{i.studentName}}</td>
+                <td>{{i.studentRollNumber}}</td>
+                <td>{{i.studentMail}}</td>
+                <td><img src="" alt="{{i.studentName}}"></td>
+                <td><a href="update/{{i.id}}" class="btn btn-success ">UPDATE</a>
+                <td><a href="delete/{{i.id}}" class="btn btn-danger ">DELETE</a>
               </tr>
-
+              {% endfor %}
             </tbody>
           </table>
+          {% endif %}
 
     </main>
 </div>

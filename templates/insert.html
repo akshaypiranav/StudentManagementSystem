@@ -1,0 +1,25 @@
+{% extends "include.html" %}
+
+{% block title %}
+Update | Student Managment
+{% endblock title %}
+
+{% block content %}
+
+<div class="container col-offset-6 rounded col-md-6 col-xs-6 border border-primary text-dark text-center" style="margin-top: 80px;">
+    <br><h1 class="display-4 fw-bold">FILL STUDENT DETAILS</h1><hr>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="STUDENT'S NAME"  id="" class="form form-control"><br>
+        <input type="text" name="rollNumber" placeholder="STUDENT'S ROLL NUMBER"  id="" class="form form-control"><br>
+        <input type="mail" name="mail" placeholder="STUDENT'S E-MAIL"  id="" class="form form-control"><br>
+        <input type="tel" name="studentContact" placeholder="STUDENT'S CONTACT"  id="" class="form form-control"><br>
+        <input type="tel" name="parentContact" placeholder="PARENT CONTACT"  id="" class="form form-control"><br>
+        <input type="file" name="profileImage" id="" class="form form-control"><br>
+        <input type="submit" value="UPDATE" class="form form-control btn btn-primary"> <br><br>
+
+
+    </form>
+</div>
+
+{% endblock %}
